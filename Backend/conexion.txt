@@ -1,0 +1,13 @@
+<?php
+require_once 'config.php';
+$con= mysqli_connect($server,$user,$mp,$database,$port);
+
+$sql = "INSERT INTO profils(pseudo,nom,prenom)VALUES ('".$_GET["pseudo"]."','".$_GET["nom"]."','".$_GET["prenom"]."')";
+if (mysqli_query($con, $sql)) {
+               
+			   
+            } else {
+               echo "Error: " . $sql . "" . mysqli_error($con);
+            }
+
+?>
